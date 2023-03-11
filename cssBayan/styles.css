@@ -1,0 +1,24 @@
+body {
+    background-color: ivory;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion {
+    margin: 50px auto;
+    width: 70vw;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #f00;
+}
