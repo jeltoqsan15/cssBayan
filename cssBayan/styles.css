@@ -87,7 +87,7 @@ body {
 }
 
 label:active .content .content-pic{
-    filter: grayscale(100);
+    opacity: 0.5;
 }
 
 /* Media queries */
