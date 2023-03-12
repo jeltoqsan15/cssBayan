@@ -30,6 +30,7 @@ body {
 }
 .accordion li label {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -50,12 +51,13 @@ body {
 .accordion .content {
     text-align: center;
     padding: 0 10px;
+    min-width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
 
-.accordion label + input[type="radio"]:checked + .content {
+.accordion li:has(input[type="radio"]:checked) label .content {
     max-height: 100%;
 }
 
@@ -96,4 +98,24 @@ body {
         color: #641e16;
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: 100vw;
+    }
+
+    .main-title {
+        font-size: 1.5em;
+    }
+
+    .accordion li label {
+        font-size: 1em;
+        color: #641e16;
+        cursor: none;
+    }
+
+    .accordion .content .content-pic {
+        width: 100%;
+    }
 }
