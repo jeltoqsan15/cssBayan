@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: ivory;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: 50px auto;
+    width: 70vw;
+}
+
+.main-title {
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid #dad8d5;
+    color: #641e16; 
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #dad8d5;
+}
+.accordion li label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.7em;
+    font-weight: 700;
+    color: rgb(0, 0, 179);
+    cursor: pointer;
+}
+
+.accordion li label span {
+    color: ivory;
+    transition: transform .3s;
+}
+
+.accordion label + input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    text-align: center;
+    padding: 0 10px;
+    min-width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+.accordion li:has(input[type="radio"]:checked) label .content {
+    max-height: 500px;
+}
+
+.accordion li:has(input[type="radio"]:checked) label span {
+    transform: rotate(90deg);
+}
+
+.accordion li:hover .content{
+    max-height: 500px;
+}
+
+.accordion li:hover span {
+    transform: rotate(90deg);
+}
+
+.accordion .content .content-pic {
+    transition: all .3s;
+    width: 500px;
+}
+
+.main:hover .accordion li label, .main:hover .accordion li label span {
+    color:#641e16;
+}
+
+label:active {
+    opacity: 0.5;
+}
+
+/* Media queries */
+@media screen and (max-width: 820px) {
+
+    .main {
+        width: 90vw;
+    }
+
+    .accordion li label {
+        font-size: 1.2em;
+        color: #641e16;
+        cursor: none;
+    }
+    
+    .accordion li label span {
+        color: #641e16;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: 100vw;
+    }
+
+    .main-title {
+        font-size: 1.5em;
+    }
+
+    .accordion li label {
+        font-size: 1em;
+        color: #641e16;
+        cursor: none;
+    }
+
+    .accordion .content {
+        padding: 0;
+    }
+
+    .accordion .content .content-pic {
+        width: 100%;
+    }
+}
