@@ -86,7 +86,7 @@ body {
     color:#641e16;
 }
 
-label:active .content .content-pic {
+label:active, label:active .content .content-pic {
     opacity: 0.5;
 }
 
