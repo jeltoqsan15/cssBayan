@@ -9,9 +9,16 @@ body {
     padding: 0;
 }
 
-.accordion {
+.main {
     margin: 50px auto;
     width: 70vw;
+}
+
+.main-title {
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid #dad8d5;
+    color: #641e16; 
 }
 
 .accordion li {
@@ -26,13 +33,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 700;
-    color: #641e16;
+    color: rgb(0, 0, 179);
 }
 
 .accordion li label span {
-    transform: rotate(90deg);
+    color: ivory;
 }
 
 .accordion label + input[type="radio"] {
@@ -51,6 +58,18 @@ body {
     max-height: 100%;
 }
 
+.accordion li:hover .content{
+    max-height: 100%;
+}
+
+.accordion li:hover span {
+    transform: rotate(90deg);
+}
+
 .accordion .content .content-pic {
     width: 500px;
+}
+
+.main:hover .accordion li label, .main:hover .accordion li label span {
+    color:#641e16;
 }
